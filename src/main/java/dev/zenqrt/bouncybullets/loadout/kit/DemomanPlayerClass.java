@@ -1,6 +1,7 @@
 package dev.zenqrt.bouncybullets.loadout.kit;
 
 import dev.zenqrt.bouncybullets.BouncyBulletsPlugin;
+import dev.zenqrt.bouncybullets.game.games.BouncyBulletGame;
 import dev.zenqrt.bouncybullets.game.games.BouncyBulletGamePlayer;
 import dev.zenqrt.bouncybullets.item.GameItems;
 import dev.zenqrt.bouncybullets.item.items.abilities.DemomanActiveAbilityItem;
@@ -26,7 +27,7 @@ final class DemomanPlayerClass implements PlayerClass {
     private static final DemomanActiveAbilityItem ACTIVE_ABILITY = GameItems.DEMOMAN_ACTIVE_ABILITY;
 
     @Override
-    public void onStartUse(BouncyBulletGamePlayer gamePlayer) {
+    public void onStartUse(BouncyBulletGame game, BouncyBulletGamePlayer gamePlayer) {
         PlayerUtils.requireNonNullAttribute(gamePlayer.getPlayer(), Attribute.MOVEMENT_SPEED)
                         .addTransientModifier(SPEED_MODIFIER);
     }

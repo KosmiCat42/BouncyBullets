@@ -1,6 +1,7 @@
 package dev.zenqrt.bouncybullets.loadout.kit;
 
 import dev.zenqrt.bouncybullets.BouncyBulletsPlugin;
+import dev.zenqrt.bouncybullets.game.games.BouncyBulletGame;
 import dev.zenqrt.bouncybullets.game.games.BouncyBulletGamePlayer;
 import dev.zenqrt.bouncybullets.item.GameItems;
 import dev.zenqrt.bouncybullets.item.items.abilities.ActiveAbilityItem;
@@ -55,7 +56,7 @@ public final class HeavyPlayerClass implements PlayerClass {
     }
 
     @Override
-    public void onStartUse(BouncyBulletGamePlayer gamePlayer) {
+    public void onStartUse(BouncyBulletGame game, BouncyBulletGamePlayer gamePlayer) {
         Player player = gamePlayer.getPlayer();
 
         AttributeInstance maxHealth = PlayerUtils.requireNonNullAttribute(player, Attribute.MAX_HEALTH);

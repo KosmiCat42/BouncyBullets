@@ -35,6 +35,12 @@ public final class GameItems {
                     new BulletProperties(3, 1.25, 0, 6, 6, 0, 100, 0)
             )
     );
+    public static final HuntingRifleGunItem HUNTING_RIFLE = registerGun(
+            new HuntingRifleGunItem(
+                    new GunProperties(10, 20, 0.1, 0.01, 6, 10, 2),
+                    new BulletProperties(3, 670, -0.1F, 5, 8, 0.1F, 50, 0.5)
+            )
+    );
     public static final MinigunGunItem MINIGUN = registerGun(
             new MinigunGunItem(
                     new GunProperties(10, 1, 0.05, 0.03, 100, 2, 1),

@@ -98,7 +98,7 @@ public final class WingmanPlayerClass implements EventPlayerClass {
     }
 
     @Override
-    public void onStartUse(BouncyBulletGamePlayer gamePlayer) {
+    public void onStartUse(BouncyBulletGame game, BouncyBulletGamePlayer gamePlayer) {
         gamePlayer.getPlayer().setAllowFlight(true);
         gamePlayer.getPlayer().setLevel(0);
         gamePlayer.getPlayer().setExp(0);

@@ -68,7 +68,7 @@ final class SniperPlayerClass implements EventPlayerClass {
     }
 
     @Override
-    public void onStartUse(BouncyBulletGamePlayer gamePlayer) {
+    public void onStartUse(BouncyBulletGame game, BouncyBulletGamePlayer gamePlayer) {
         Player player = gamePlayer.getPlayer();
 
         this.chargeTasks.put(

@@ -78,6 +78,10 @@ public enum PlayerClassType {
                     "<gold>Passive Ability: <aqua>Sluggish",
                     "<gray>Your speed is decreased by some amount."
             )
+    ),
+    BOUNTY_HUNTER(new BountyHunterPlayerClass(), Material.TARGET,
+        List.of(),
+        List.of()
     )
 //    SIDEWINDER(new SidewinderPlayerClass(), Material.FEATHER,
 //            List.of(),

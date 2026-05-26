@@ -186,7 +186,7 @@ public final class BattleGameState extends GameState {
 
         this.players.forEach((_, gamePlayer) -> {
             PlayerClass playerClass = gamePlayer.getLoadout().playerClass();
-            playerClass.onStartUse(gamePlayer);
+            playerClass.onStartUse(this.game, gamePlayer);
         });
 
         this.playerEventNode.registerListener(PaperEventListener.builder(PlayerTeleportEvent.class)

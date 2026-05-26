@@ -1,6 +1,7 @@
 package dev.zenqrt.bouncybullets.loadout.kit;
 
 import dev.zenqrt.bouncybullets.BouncyBulletsPlugin;
+import dev.zenqrt.bouncybullets.game.games.BouncyBulletGame;
 import dev.zenqrt.bouncybullets.game.games.BouncyBulletGamePlayer;
 import dev.zenqrt.bouncybullets.item.GameItems;
 import dev.zenqrt.bouncybullets.item.items.abilities.HealerActiveAbilityItem;
@@ -26,7 +27,7 @@ final class HealerPlayerClass implements PlayerClass {
     private final List<BukkitTask> healTasks = new ArrayList<>();
 
     @Override
-    public void onStartUse(BouncyBulletGamePlayer gamePlayer) {
+    public void onStartUse(BouncyBulletGame game, BouncyBulletGamePlayer gamePlayer) {
         Player player = gamePlayer.getPlayer();
 
         PlayerUtils.requireNonNullAttribute(player, Attribute.MAX_ABSORPTION)
